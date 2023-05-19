@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: "SUIT Variable", sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 15px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.header-ul li {
+  margin-right: 12px;
+}
+
+.bars-btn {
+  background-color: white;
+  border: none;
+  border-radius: 100%;  
+}
+
+.bars-btn:hover {
+  background-color: #ebebec;
+}
+
+.bars-btn i {
+  font-size: 20px;  
+}
+
+.search-box {
+  border-radius: 10px 0 0 10px;
+}
