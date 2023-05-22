@@ -2,37 +2,101 @@
   box-sizing: border-box;
   font-family: "SUIT Variable", sans-serif;
 }
-
 body {
   margin: 0px;
-  padding: 15px;
+  padding: 0px;
 }
-
 ul {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
+}
+
+
+header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.header-box {
   display: flex;
 }
-
-.header-ul li {
+.logo {
+  padding-top: 9px;
+}
+.header-box li {
   margin-right: 12px;
 }
-
 .bars-btn {
   background-color: white;
   border: none;
   border-radius: 100%;  
 }
-
 .bars-btn:hover {
   background-color: #ebebec;
 }
-
 .bars-btn i {
+  width: 30px;
+  height: 40px;
+  border-radius: 50px;
   font-size: 20px;  
+  padding-top: 10px;
+}
+.search-bar {
+  border-radius: 20px;
+  width: 550px;
+  height: 40px;
+  padding: 17px;
+}
+.search-box {
+  display: inline-block;
+  position: relative;
+}
+.search-box i {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.profile-photo {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  margin: 2px 0 0 7px;
 }
 
-.search-box {
-  border-radius: 10px 0 0 10px;
+
+aside {
+  width: 220px;
+  padding-left: 15px;
+  overflow:auto; /*스크롤 창*/
+}
+.aside-btn {
+  width: 195px;
+  height: 40px;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 15px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+button:hover {
+  background-color: #ebebec;
+}
+.aside-btn i {
+  font-size: 15px;
+  margin: 0 15px 0 8px;
+}
+aside ul>p {
+  margin-left: 8px;
+}
+.sub img {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin: 0 15px 3px 8px;
+  vertical-align: middle;
 }
