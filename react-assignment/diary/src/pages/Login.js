@@ -1,6 +1,8 @@
 import loginImg from "../img/passion.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  let navigate = useNavigate();
   return (
     <div className="login-page">
       <img src={loginImg} alt="" width="500px" />
@@ -13,7 +15,13 @@ export default function Login() {
         <br />
         <input className="PW" type="text" placeholder="비밀번호를 입력하세요" />
         <br />
-        <button>로그인</button>
+        <button
+          onClick={() => {
+            navigate("/TodoList");
+          }}
+        >
+          로그인
+        </button>
         <p>회원가입 | 아이디 찾기 | 비밀번호 찾기</p>
       </div>
     </div>
