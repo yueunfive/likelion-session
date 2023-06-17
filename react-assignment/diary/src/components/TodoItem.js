@@ -17,7 +17,7 @@ function TodoItem(props) {
       <button
         onClick={() => {
           let copy = [...props.todoList];
-          copy.splice(i, 1); // 배열 a번째 항목부터 b개 제거
+          copy.splice(props.i, 1);
           props.setTodoList(copy);
         }}
       >
