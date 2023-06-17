@@ -10,15 +10,16 @@ export default function TodoList() {
   return (
     <main>
       <h1>2023년 6월 20일</h1>
-      <h3 style={{ color: "grey" }}>화요일</h3>
+      <h2 style={{ color: "grey" }}>화요일</h2>
       <input
         value={inputValue}
         type="text"
         onChange={(e) => setInputValue(e.target.value)}
+        placeholder="할 일"
       />
       <button onClick={addItem}>추가</button>
 
-      <TodoBoard todoList={todoList} />
+      <TodoBoard todoList={todoList} setTodoList={setTodoList} />
     </main>
   );
 }
