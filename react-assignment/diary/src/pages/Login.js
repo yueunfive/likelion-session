@@ -8,7 +8,7 @@ export default function Login() {
       <img src={loginImg} alt="" width="500px" />
       <div className="phrase">
         <p>일정관리</p>
-        <p>하자 했잖아!</p>
+        <p>하자 했잖아</p>
       </div>
       <div className="login">
         <input className="ID" type="text" placeholder="아이디를 입력하세요" />
