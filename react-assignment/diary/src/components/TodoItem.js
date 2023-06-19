@@ -10,10 +10,10 @@ function TodoItem(props) {
     <div className={styles.todoItem}>
       <div>
         <input
+          className={styles.checkbox}
           type="checkbox"
           onChange={() => {
             setChecked(!checked);
-            // 체크박스 클릭하면 맨 위로(배열 맨 앞으로) 가게 하고 싶음..
           }}
         />
         <span style={checked ? style2 : style1}>{props.item}</span>
