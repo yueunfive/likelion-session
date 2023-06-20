@@ -10,6 +10,8 @@ function TodoBoard(props) {
           i={i}
           todoList={props.todoList}
           setTodoList={props.setTodoList}
+          inputValue={props.inputValue}
+          setInputValue={props.setInputValue}
         />
       ))}
     </div>

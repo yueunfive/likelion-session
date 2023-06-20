@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import TodoBoard from "../components/TodoBoard";
-import styles from "./TodoList.module.css";
+import styles from "../css/TodoList.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -9,6 +9,9 @@ export default function TodoList() {
   const [todoList, setTodoList] = useState([]);
   const addItem = () => {
     setTodoList([...todoList, inputValue]); // spread 연산자로 기존 아이템 복사해서 유지하기
+  };
+  const handleSave = () => {
+    setInputValue(""); // input란에 써있는 값 비우기
   };
   const keyPress = (e) => {
     if (e.key === "Enter") {
@@ -37,7 +40,12 @@ export default function TodoList() {
         <button onClick={addItem}>추가</button>
       </div>
       <div className={styles.list}>
-        <TodoBoard todoList={todoList} setTodoList={setTodoList} />
+        <TodoBoard
+          todoList={todoList}
+          setTodoList={setTodoList}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+        />
       </div>
     </div>
   );

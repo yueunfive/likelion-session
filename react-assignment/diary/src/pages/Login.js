@@ -1,6 +1,6 @@
 import loginImg from "../img/passion.png";
 import { useNavigate } from "react-router-dom";
-import styles from "./Login.module.css";
+import styles from "../css/Login.module.css";
 
 export default function Login() {
   let navigate = useNavigate();
@@ -21,8 +21,8 @@ export default function Login() {
     <div className={styles.loginPage}>
       <img src={loginImg} alt="" width="500px" />
       <div className={styles.phrase}>
+        <p>한사랑</p>
         <p>일정관리</p>
-        <p>하자 했잖아</p>
       </div>
       <div className={styles.login}>
         <input
