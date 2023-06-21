@@ -7,17 +7,25 @@ import "react-datepicker/dist/react-datepicker.css";
 export default function TodoList() {
   const [inputValue, setInputValue] = useState(""); // 값을 저장할 때 state 사용
   const [todoList, setTodoList] = useState([]);
+
+  // spread 연산자로 기존 아이템 복사해서 유지하기
   const addItem = () => {
-    setTodoList([...todoList, inputValue]); // spread 연산자로 기존 아이템 복사해서 유지하기
+    setTodoList([...todoList, inputValue]);
   };
+
+  // '추가'하면 input란에 써있는 값 비우기
   const handleSave = () => {
-    setInputValue(""); // input란에 써있는 값 비우기
+    setInputValue("");
   };
+
+  // Enter 입력이 되면 클릭 이벤트 실행
   const keyPress = (e) => {
     if (e.key === "Enter") {
-      addItem(); // Enter 입력이 되면 클릭 이벤트 실행
+      addItem();
+      handleSave();
     }
   }; // 인풋에 적용할 Enter 키 입력 함수
+
   const [startDate, setStartDate] = useState(new Date()); // datepicker
 
   return (
@@ -37,7 +45,14 @@ export default function TodoList() {
           placeholder="할 일"
           onKeyPress={keyPress}
         />
-        <button onClick={addItem}>추가</button>
+        <button
+          onClick={() => {
+            addItem();
+            handleSave();
+          }}
+        >
+          추가
+        </button>
       </div>
       <div className={styles.list}>
         <TodoBoard
