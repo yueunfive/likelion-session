@@ -36,9 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
 body {
   background-color: rgb(176, 216, 176);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
 }

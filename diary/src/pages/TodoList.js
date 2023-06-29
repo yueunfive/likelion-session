@@ -3,8 +3,10 @@ import TodoBoard from "../components/TodoBoard";
 import styles from "../css/TodoList.module.css";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { useNavigate } from "react-router-dom";
 
 export default function TodoList() {
+  let navigate = useNavigate();
   const [inputValue, setInputValue] = useState(""); // 값을 저장할 때 state 사용
   const [todoList, setTodoList] = useState([]);
 
@@ -62,6 +64,9 @@ export default function TodoList() {
           setInputValue={setInputValue}
         />
       </div>
+      <button className={styles.logout} onClick={() => navigate("/")}>
+        로그아웃
+      </button>
     </div>
   );
 }
