@@ -14,9 +14,11 @@ function TodoItem(props) {
 
   // 수정 기능
   const changeItem = () => {
-    let copy = [...props.todoList];
-    copy.splice(props.i, 1, props.inputValue);
-    props.setTodoList(copy);
+    if (props.inputValue != "") {
+      let copy = [...props.todoList];
+      copy.splice(props.i, 1, props.inputValue);
+      props.setTodoList(copy);
+    }
   };
 
   return (

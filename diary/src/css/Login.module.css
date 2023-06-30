@@ -1,14 +1,22 @@
+.loginPage {
+  width: 900px;
+  height: 600px;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+}
+
 img {
   position: absolute;
-  top: 100px;
-  left: 300px;
+  top: 60px;
+  left: 50px;
 }
 
 .phrase {
   display: inline-block;
   position: absolute;
-  top: 220px;
-  right: 380px;
+  top: 190px;
+  right: 103px;
   font-size: 30px;
 }
 
@@ -20,8 +28,8 @@ img {
 .login {
   display: inline-block;
   position: absolute;
-  top: 350px;
-  right: 330px;
+  top: 320px;
+  right: 50px;
 }
 
 .login p {
@@ -50,3 +58,11 @@ input::placeholder {
   border: none;
   background-color: rgb(36, 206, 36);
 }
+
+@media screen and (max-width: 768px) {
+  .loginPage {
+    font-size: 30px;
+  }
+}
+/* "현재 브라우저의 폭이 768px 이하일 경우에 
+안에 있는 class를 적용 */

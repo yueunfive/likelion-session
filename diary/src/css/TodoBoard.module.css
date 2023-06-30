@@ -1,0 +1,6 @@
+.TodoBoard {
+  width: 330px;
+  height: 410px;
+  overflow: auto;
+  margin-left: 9px;
+}
