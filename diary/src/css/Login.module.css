@@ -13,11 +13,8 @@ img {
 }
 
 .phrase {
-  display: inline-block;
-  position: absolute;
-  top: 190px;
-  right: 103px;
   font-size: 30px;
+  margin-bottom: 40px;
 }
 
 .phrase p {
@@ -25,10 +22,11 @@ img {
   font-weight: bold;
 }
 
-.login {
+.loginBox {
   display: inline-block;
   position: absolute;
-  top: 320px;
+  text-align: center;
+  top: 200px;
   right: 50px;
 }
 
@@ -59,10 +57,18 @@ input::placeholder {
   background-color: rgb(36, 206, 36);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .loginPage {
-    font-size: 30px;
+    width: 100%;
+  }
+  .loginPage img {
+    display: none;
+  }
+  .loginBox {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
-/* "현재 브라우저의 폭이 768px 이하일 경우에 
+/* "현재 브라우저의 폭이 992px 이하일 경우에 
 안에 있는 class를 적용 */
