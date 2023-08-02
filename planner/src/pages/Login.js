@@ -13,13 +13,6 @@ export default function Login() {
     navigate("/TodoList");
   };
 
-  // 인풋에 적용할 Enter 키 입력 함수
-  const handleOnKeyPress = (e) => {
-    if (e.key === "Enter") {
-      handleOnClick(); // Enter 입력이 되면 클릭 이벤트 실행
-    }
-  };
-
   // 아이디, 비밀번호 4자 미만 삽입시 경고
   const wordCondition = () => {
     if (id.length < 4 || pw.length < 4) {
@@ -27,6 +20,16 @@ export default function Login() {
       return false;
     }
     return true;
+  };
+
+  // 인풋에 적용할 Enter 키 입력 함수
+  // Enter 입력이 되면 클릭 이벤트 실행
+  const handleOnKeyPress = (e) => {
+    if (e.key === "Enter") {
+      if (wordCondition()) {
+        handleOnClick();
+      }
+    }
   };
 
   return (

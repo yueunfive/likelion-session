@@ -36,10 +36,6 @@ function TodoItem(props) {
             <span style={checked ? style2 : style1}>{props.item}</span>
           </div>
           <div>
-            {/* 자세히 버튼 구현하기 -> 옆에 다른 창 띄우기(피드백 적는 메모장 + 이모지 삽입 기능) */}
-            <button className={styles.detail} onClick={() => {}}>
-              자세히
-            </button>
             <button
               className={styles.modify}
               onClick={() => {
@@ -61,5 +57,5 @@ function TodoItem(props) {
     </div>
   );
 }
-
+// 질문 : hidden으로 삭제하면 위에 눈으로만 안보이고 todoList 배열에는 아직 남아있는거 아닌가?
 export default TodoItem;

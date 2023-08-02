@@ -37,40 +37,38 @@ export default function TodoList() {
   const [startDate, setStartDate] = useState(new Date()); // datepicker
 
   return (
-    <div>
-      <div className={styles.container}>
-        <DatePicker
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          dateFormat="yyyy년 MM월 dd일"
-          className={styles.datePicker}
+    <div className={styles.container}>
+      <DatePicker
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        dateFormat="yyyy년 MM월 dd일"
+        className={styles.datePicker}
+      />
+      <h2>오늘 할 일</h2>
+      <div className={styles.todo}>
+        <input
+          value={inputValue}
+          type="text"
+          onChange={(e) => setInputValue(e.target.value)}
+          placeholder="할 일"
+          onKeyPress={keyPress}
         />
-        <h2>오늘 할 일</h2>
-        <div className={styles.todo}>
-          <input
-            value={inputValue}
-            type="text"
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="할 일"
-            onKeyPress={keyPress}
-          />
-          <button
-            onClick={() => {
-              addItem();
-              handleSave();
-            }}
-          >
-            추가
-          </button>
-        </div>
-        <div className={styles.list}>
-          <TodoBoard
-            todoList={todoList}
-            setTodoList={setTodoList}
-            inputValue={inputValue}
-            setInputValue={setInputValue}
-          />
-        </div>
+        <button
+          onClick={() => {
+            addItem();
+            handleSave();
+          }}
+        >
+          추가
+        </button>
+      </div>
+      <div className={styles.list}>
+        <TodoBoard
+          todoList={todoList}
+          setTodoList={setTodoList}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+        />
       </div>
       <button className={styles.logout} onClick={() => navigate("/")}>
         로그아웃
