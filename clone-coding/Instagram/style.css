@@ -9,7 +9,6 @@ body {
   min-width: 1400px;
 }
 
-
 nav {
   width: 250px;
   height: 100%;
@@ -60,7 +59,6 @@ i {
   margin-top: 50px;
 }
 
-
 main {
   margin-left: 250px;
   width: 55%;
@@ -73,7 +71,6 @@ main {
 .feed img {
   width: 520px;
 }
-
 
 .profile {
   margin-top: 40px;
@@ -91,14 +88,16 @@ main {
 .text {
   margin: 0 7px;
 }
-.profile-name p, .follow-name p {
+.profile-name p,
+.follow-name p {
   color: grey;
 }
-.profile span, .follow span {
+.profile span,
+.follow span {
   position: absolute;
   right: 0px;
   font-size: 12px;
-  color: cornflowerblue;  
+  color: cornflowerblue;
 }
 .recommend {
   width: 300px;
@@ -132,7 +131,7 @@ main {
   color: lightgray;
   font-size: 13px;
   word-spacing: -2px;
-  margin: 5px 0; 
+  margin: 5px 0;
 }
 #corp {
   margin-top: 25px;

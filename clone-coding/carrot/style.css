@@ -66,7 +66,7 @@ input:focus {
   width: 100%;
   height: 750px;
   position: relative;
-} 
+}
 
 .con1 {
   background-color: rgb(236, 232, 228);
@@ -106,7 +106,7 @@ input:focus {
 }
 
 .content p {
-  margin: 0 0 30px; 
+  margin: 0 0 30px;
 }
 
 .btn {
